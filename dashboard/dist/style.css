@@ -11,6 +11,7 @@
   --c-gray-100: #ffffff;
   --c-green-500: #45ffbc;
   --c-olive-500: #e3ffa8;
+  --c-blue-500: #1a59bf;
   --c-white: var(--c-gray-100);
   --c-text-primary: var(--c-gray-100);
   --c-text-secondary: var(--c-gray-200);
@@ -214,7 +215,7 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: 0.25s ease;
+  transition: 0.35s ease;
 }
 .navigation a * {
   transition: 0.25s ease;
@@ -225,13 +226,33 @@ a {
   flex-shrink: 0;
 }
 .navigation a + a {
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 }
 .navigation a:hover, .navigation a:focus {
-  transform: translateX(4px);
+  transform: translateX(20px);
   color: var(--c-text-primary);
 }
-
+.dashboard{
+  color: var(--c-text-primary);
+}
+.ph-browsers{
+  color: red;
+}
+.ph-check-square{
+  color: orange;
+}
+.ph-swap{
+  color: yellow;
+}
+.ph-file-text{
+  color: green;
+}
+.ph-globe{
+  color: brown;
+}
+.ph-clipboard-text{
+  color: violet;
+}
 .tabs {
   display: flex;
   justify-content: space-between;
@@ -447,6 +468,7 @@ a {
   border-bottom: 1px solid var(--c-gray-600);
   background-color: transparent;
   padding-left: 1.5rem;
+  color: white;
 }
 .search-field i {
   position: absolute;
@@ -473,6 +495,9 @@ a {
           appearance: none;
   color: var(--c-text-tertiary);
   width: 100%;
+}
+.dropdown-field select option{
+  color: var( --c-gray-900);
 }
 .dropdown-field i {
   position: absolute;
@@ -730,13 +755,19 @@ a {
   color: var(--c-text-primary);
   cursor: pointer;
 }
-.card-button.mastercard svg {
-  max-height: 15px;
+.card-button.mastercard  {
+
+  width: 50px;
+  height: 34px;
 }
-.card-button:focus, .card-button:hover, .card-button.active {
-  color: var(--c-gray-800);
+.card-button.mastercard:hover ,.card-button.mastercard :active{
+  background-color: var(--c-blue-500);
+  width: 50px;
+  height: 34px;
+}
+.card-button.visa:focus, .card-button.visa:hover, .card-button.visa:active {
   background-color: var(--c-white);
-  border-color: var(--c-white);
+  color:var(--c-gray-900 ) ;
 }
 
 .faq {
@@ -813,5 +844,4 @@ a:focus,
 textarea:focus,
 button:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
 }
