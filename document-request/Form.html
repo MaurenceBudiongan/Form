@@ -7,10 +7,10 @@
     <title>Document</title>
   </head>
   <body>
-   <div class="div1"></div>
-   <div class="div2"></div>
-   <div class="div3"></div>
-   
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+
     <div class="container">
       <div class="intro">
         <h1>Online Barangay Document Request</h1>
@@ -20,48 +20,98 @@
           time and effort while staying connected."
         </p>
       </div>
+
       <div class="form">
+        <!-- Register Form -->
         <div id="register" class="register">
-          <form action="">
+          <form onsubmit="return validateUsername()">
             <h3>Document Request Register</h3>
-            <label for="Fullname">Full name</label>
+            <label for="fullname">Full name</label>
             <input
               type="text"
               name="fullname"
-              id="Fullname"
+              id="fullname"
               placeholder="Enter Fullname"
+              required
             />
-            <label for="Email">Email</label>
-            <input type="email" id="Email" placeholder="Enter email" />
-            <label for="Password">Password</label>
-            <input type="password" id="Password" placeholder="Enter password" />
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter Username"
+              required
+            />
+            <span id="username-error" style="color: red; display: none"
+              >Username must contain at least one uppercase letter and one
+              symbol.</span
+            >
+            <label for="register-email">Email</label>
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Enter email"
+              required
+            />
+            <label for="register-password">Password</label>
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Enter password"
+              required
+            />
             <button type="submit">Register</button>
             <p>
-              Been here before? <a onclick="login()">Log in</a>
+              Been here before?
+              <a href="javascript:void(0)" onclick="login()">Log in</a>
             </p>
           </form>
         </div>
 
-        <div id="login" class="login">
-          <form action="">
+        <!-- Login Form -->
+        <div id="login" class="login" style="display: none">
+          <form action="../dark-uibank-dashboard-concept/dist/index.html">
             <h3>Document Request Login</h3>
-
-            <label for="Email">Email</label>
-            <input type="email" id="Email" placeholder="Enter email" />
-            <label for="Password">Password</label>
-            <input type="password" id="Password" placeholder="Enter password" />
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" placeholder="Enter email" />
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Enter password"
+            />
             <button type="submit">Log in</button>
-            <p>New here? <a onclick="register()">Sign up</a> now to get started!</p>
+            <p>
+              New here?
+              <a href="javascript:void(0)" onclick="register()">Sign up</a> now
+              to get started!
+            </p>
           </form>
         </div>
       </div>
     </div>
 
     <script>
+      function validateUsername() {
+        const username = document.getElementById("username").value;
+        const usernameError = document.getElementById("username-error");
+
+        const regex = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).+$/;
+
+        if (!regex.test(username)) {
+          usernameError.style.display = "block";
+          return false; // Prevent form submission
+        } else {
+          usernameError.style.display = "none";
+          return true; // Allow form submission
+        }
+      }
+
       function login() {
         document.getElementById("register").style.display = "none";
         document.getElementById("login").style.display = "block";
       }
+
       function register() {
         document.getElementById("register").style.display = "block";
         document.getElementById("login").style.display = "none";
