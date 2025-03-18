@@ -63,7 +63,7 @@
             </a>
               <a href="#">
               <i class="ph-user"></i>
-              <span class="user">User</span>
+              <span  onclick="showUser()">User</span>
             </a>
             <a href="#">
               <i class="ph-check-square"></i>
@@ -90,16 +90,26 @@
               <span>Request History</span>
             </a>
           </nav>
-          <footer class="footer">
-            <h1>Trinidad_Parish<small>©</small></h1>
-            <div>
-              Trinidad_Parish ©<br />
-              All Rights Reserved 2025
-            </div>
-          </footer>
+   
         </div>
         <div id="main-content" class="app-body-main-content">
-          <section class="service-section">
+           <div id="user" class="user">
+            <i onclick="showMain()" class="ph-caret-left"></i>
+          <ul>
+            <h1>Registered User</h1>
+          <div class="user-list">
+           <div>
+            <i class="ph-user"></i>       
+            <li>Maurence Budiongan</li>
+           </div>
+             <div>
+              <i class="ph-user"></i>
+              <li>Ben Bargayo</li>
+             </div>
+          </div>
+          </ul>
+        </div>
+          <section id="service-section" class="service-section">
             <h2>Service</h2>
             <div class="service-section-header">
               <div class="search-field">
@@ -259,15 +269,9 @@
               </div>
             </div>
           </section>
-        <div class="user">
-          <ul>
-            <h1>Registered User</h1>
-            <li>Maurence</li>
-          </ul>
-        </div>
         </div>
         <div class="app-body-sidebar">
-          <section class="payment-section">
+          <section id="payment-section" class="payment-section">
             <h2>New Payment</h2>
             <div class="payment-section-header">
               <p>Choose a e-wallet to pay request</p>
