@@ -16,21 +16,20 @@
         <div class="app-header-logo">
           <div class="logo">
             <span class="logo-icon">
-              <img src="assets/trinidad.png" />
+              <img src="assets/Trinidad.jpg" />
             </span>
             <h1 class="logo-title">
-              <span>Trinidad_DR</span>
-              <span>DocRequest</span>
+              <span>Trinidad_Parish</span>
+              <span>Record & Request</span>
             </h1>
           </div>
         </div>
         <div class="app-header-navigation">
-          <div class="tabs">
-            <a href="#"> Admin</a>
-            <a href="#" class="activ"> Payments </a>
-            <a href="#">Feedback</a>
-            <a href="#">Get In Touch</a>
-            <a href="#"> Log out</a>
+          <div class="tabs">          
+            <a href="#">Financial Management</a>
+            <a href="#">Event Management</a>
+            <a href="#">Staff Management</a>
+            <a href="">Reports and Analytics </a>
           </div>
         </div>
         <div class="app-header-actions">
@@ -42,10 +41,10 @@
           </button>
           <div class="app-header-actions-buttons">
             <button class="icon-button large">
-              <i class="ph-magnifying-glass"></i>
+              <i class="ph-sign-out"></i>
             </button>
             <button class="icon-button large">
-              <i class="ph-bell"></i>
+              <i class="ph-chat-circle-dots"></i> 
             </button>
           </div>
         </div>
@@ -62,21 +61,29 @@
               <i class="ph-browsers"></i>
               <span class="dashboard">Dashboard</span>
             </a>
+              <a href="#">
+              <i class="ph-user"></i>
+              <span class="user">User</span>
+            </a>
             <a href="#">
               <i class="ph-check-square"></i>
-              <span>Registered Residents</span>
+              <span>Baptists Records</span>
             </a>
             <a href="#">
               <i class="ph-swap"></i>
-              <span>Request Document</span>
+              <span>Confirmation Records</span>
             </a>
             <a href="#">
               <i class="ph-file-text"></i>
-              <span>Manage Requests</span>
+              <span>Marriage Records</span>
             </a>
             <a href="#">
               <i class="ph-globe"></i>
-              <span>Request Status</span>
+              <span>Death Records</span>
+            </a>
+            <a href="#">
+              <i class="ph-file-plus"></i>
+              <span>Certificate Request</span>
             </a>
             <a href="#transfer-section">
               <i class="ph-clipboard-text"></i>
@@ -84,26 +91,30 @@
             </a>
           </nav>
           <footer class="footer">
-            <h1>Trinidad_DR<small>©</small></h1>
+            <h1>Trinidad_Parish<small>©</small></h1>
             <div>
-              Trinidad_DR ©<br />
+              Trinidad_Parish ©<br />
               All Rights Reserved 2025
             </div>
           </footer>
         </div>
-        <div class="app-body-main-content">
+        <div id="main-content" class="app-body-main-content">
           <section class="service-section">
             <h2>Service</h2>
             <div class="service-section-header">
               <div class="search-field">
                 <i class="ph-magnifying-glass"></i>
-                <input class="Reference-code" type="text" placeholder="Reference Code" />
+                <input
+                  class="Reference-code"
+                  type="text"
+                  placeholder="Reference Code"
+                />
               </div>
               <div class="dropdown-field">
                 <select>
-                  <option>Barang Clearance</option>
-                  <option>Barangay Certificate</option>
-                  <option>Permit</option>
+                  <option>Baptismal</option>
+                  <option>Confirmation</option>
+                  <option>Marriage Certificates</option>
                 </select>
                 <i class="ph-caret-down"></i>
               </div>
@@ -117,12 +128,12 @@
                 <div class="tile-header">
                   <i class="ph-lightning-light"></i>
                   <h3>
-                    <span>Barangay Clearance</span>
-                    <span>Community Approval</span>
+                    <span>Baptismal</span>
+                    <span>Sacramental Validation</span>
                   </h3>
                 </div>
                 <div class="total">
-                  <h1 style="text-align: center;"> +04</h1>
+                  <h1 style="text-align: center">+04</h1>
                 </div>
                 <a href="#">
                   <span>See Request</span>
@@ -135,12 +146,12 @@
                 <div class="tile-header">
                   <i class="ph-fire-simple-light"></i>
                   <h3>
-                    <span>Barangay Certificate</span>
-                    <span>Certificate of Residency</span>
+                    <span>Confirmation</span>
+                    <span>Clergy Approval</span>
                   </h3>
                 </div>
                 <div class="total">
-                  <h1 style="text-align: center;"> +13</h1>
+                  <h1 style="text-align: center">+13</h1>
                 </div>
                 <a href="#">
                   <span>See Request</span>
@@ -153,12 +164,12 @@
                 <div class="tile-header">
                   <i class="ph-file-light"></i>
                   <h3>
-                    <span>Permit</span>
-                    <span>Business Licensing</span>
+                    <span>Marriage Cert.</span>
+                    <span>Legal Validation</span>
                   </h3>
                 </div>
                 <div class="total">
-                  <h1 style="text-align: center;"> +30</h1>
+                  <h1 style="text-align: center">+30</h1>
                 </div>
                 <a href="#">
                   <span>See Request</span>
@@ -170,7 +181,8 @@
             </div>
             <div class="service-section-footer">
               <p>
-                Document requests are processed based on barangay guidelines and requirements.
+                Document requests are processed based on parish guidelines and
+                requirements.
               </p>
             </div>
           </section>
@@ -190,11 +202,11 @@
             <div class="transfers">
               <div class="transfer">
                 <div class="transfer-logo">
-                  <img src="/dashboard/dist/assets/custom-clearance.png" />
+                  <img src="./assets/bapstismal.png" />
                 </div>
                 <dl class="transfer-details">
                   <div>
-                    <dt>Barangay Clearance</dt>
+                    <dt>Baptismal</dt>
                     <dd>Jerlyn Kayi</dd>
                   </div>
                   <div>
@@ -209,11 +221,11 @@
               </div>
               <div class="transfer">
                 <div class="transfer-logo">
-                  <img src="/dashboard/dist/assets/diploma.png" />
+                  <img src="./assets/confirmation.png" />
                 </div>
                 <dl class="transfer-details">
                   <div>
-                    <dt>Barangay Certificate</dt>
+                    <dt>Confirmation</dt>
                     <dd>Mary Cris</dd>
                   </div>
                   <div>
@@ -228,11 +240,11 @@
               </div>
               <div class="transfer">
                 <div class="transfer-logo">
-                  <img src="/dashboard/dist/assets/permit.png" />
+                  <img src="./assets/marriage.png" />
                 </div>
                 <dl class="transfer-details">
                   <div>
-                    <dt>Permits</dt>
+                    <dt>Marriage Certificate</dt>
                     <dd>Angelica Bitter</dd>
                   </div>
                   <div>
@@ -247,6 +259,12 @@
               </div>
             </div>
           </section>
+        <div class="user">
+          <ul>
+            <h1>Registered User</h1>
+            <li>Maurence</li>
+          </ul>
+        </div>
         </div>
         <div class="app-body-sidebar">
           <section class="payment-section">
@@ -255,9 +273,9 @@
               <p>Choose a e-wallet to pay request</p>
               <div>
                 <button class="card-button mastercard">
-                 <img src="./assets/gcash-logo.png" alt="">
+                  <img src="./assets/gcash-logo.png" alt="" />
                 </button>
-                <button class="card-button visa ">
+                <button class="card-button visa">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="2500"
